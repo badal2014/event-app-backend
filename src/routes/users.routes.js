@@ -6,7 +6,7 @@ const Sequelize = require('sequelize');
 const { or, and, gt, lt } = Sequelize.Op;
 
 
-.post('/create/user', async (req, res) => {
+router.post('/create/user', async (req, res) => {
     const qgetuery = `
     INSERT INTO users (email, firstname, lastname, age , mobileno , city , state)  VALUES ('${req.body.email}','${req.body.firstname}', '${req.body.lastname}','${req.body.age}', '${req.body.mobileno}', '${req.body.city}', '${req.body.state}')
     `;
