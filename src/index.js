@@ -4,7 +4,7 @@ const users = require('./routes/users.routes');
 const auth = require('./routes/auth.routes')
 const all_events = require('./routes/all.events.routes');
 const cors = require('cors');
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 const db = require('./config/database');
 
 const findPeopleByName = require('./mailer/cron-job')
