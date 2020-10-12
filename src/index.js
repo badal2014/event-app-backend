@@ -5,14 +5,14 @@ const auth = require('./routes/auth.routes')
 const all_events = require('./routes/all.events.routes');
 const cors = require('cors');
 const port = process.env.PORT || 3000;
-const db = require('./config/database');
+// const db = require('./config/database');
 
 const findPeopleByName = require('./mailer/cron-job')
 
 
-db.authenticate()
-    .then(() => console.log('Database connected'))
-    .catch(err => console.log('Error', err))
+// db.authenticate()
+//     .then(() => console.log('Database connected'))
+//     .catch(err => console.log('Error', err))
 app.use(cors())
 findPeopleByName()
 app.use(express.json())
